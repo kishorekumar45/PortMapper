@@ -1,0 +1,112 @@
+{
+  "scan_id": "2026-08-17T09:00:00-fixture",
+  "scanned_at": "2026-08-17T09:00:00",
+  "hosts": [
+    {
+      "mac": "AA:BB:CC:00:11:22",
+      "mac_status": "known",
+      "ip_addresses": ["192.168.1.10"],
+      "hostname": "nas.lan",
+      "first_seen": "2026-08-01T09:00:00",
+      "last_seen": "2026-08-17T09:00:00",
+      "ports": [
+        {
+          "number": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "service": {
+            "name": "ssh",
+            "product": "OpenSSH",
+            "version": "9.6",
+            "banner": "SSH-2.0-OpenSSH_9.6"
+          }
+        },
+        {
+          "number": 445,
+          "protocol": "tcp",
+          "state": "open",
+          "service": {
+            "name": "microsoft-ds",
+            "product": "Samba",
+            "version": "4.19",
+            "banner": null
+          }
+        }
+      ]
+    },
+    {
+      "mac": "AA:BB:CC:00:33:44",
+      "mac_status": "known",
+      "ip_addresses": ["192.168.1.20"],
+      "hostname": "printer.lan",
+      "first_seen": "2026-07-15T09:00:00",
+      "last_seen": "2026-08-17T09:00:00",
+      "ports": [
+        {
+          "number": 9100,
+          "protocol": "tcp",
+          "state": "open",
+          "service": {
+            "name": "jetdirect",
+            "product": null,
+            "version": null,
+            "banner": null
+          }
+        },
+        {
+          "number": 23,
+          "protocol": "tcp",
+          "state": "open",
+          "service": {
+            "name": "telnet",
+            "product": null,
+            "version": null,
+            "banner": "Telnet service ready"
+          }
+        }
+      ]
+    },
+    {
+      "mac": "AA:BB:CC:00:55:66",
+      "mac_status": "known",
+      "ip_addresses": ["192.168.1.1"],
+      "hostname": "router.lan",
+      "first_seen": "2026-01-01T09:00:00",
+      "last_seen": "2026-08-17T09:00:00",
+      "ports": [
+        {
+          "number": 53,
+          "protocol": "udp",
+          "state": "open",
+          "service": {
+            "name": "domain",
+            "product": "dnsmasq",
+            "version": "2.90",
+            "banner": null
+          }
+        }
+      ]
+    },
+    {
+      "mac": "DE:AD:BE:EF:00:01",
+      "mac_status": "randomized",
+      "ip_addresses": ["192.168.1.144"],
+      "hostname": null,
+      "first_seen": "2026-08-17T09:00:00",
+      "last_seen": "2026-08-17T09:00:00",
+      "ports": [
+        {
+          "number": 5353,
+          "protocol": "udp",
+          "state": "open",
+          "service": {
+            "name": "mdns",
+            "product": null,
+            "version": null,
+            "banner": null
+          }
+        }
+      ]
+    }
+  ]
+}

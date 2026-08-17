@@ -1,0 +1,48 @@
+# PortMapper declared policy
+# - mac: stable identifier PortMapper uses to match this rule to a scanned host.
+# - allowed_ports: whitelist. Any open port NOT listed here is flagged as drift.
+# - required_ports: must be open. Missing any of these is flagged as a finding.
+
+hosts:
+  - host: nas
+    mac: "AA:BB:CC:00:11:22"
+    hostname: nas.lan
+    allowed_ports:
+      - port: 22
+        protocol: tcp
+      - port: 445
+        protocol: tcp
+    required_ports:
+      - port: 22
+        protocol: tcp
+      - port: 445
+        protocol: tcp
+
+  - host: printer
+    mac: "AA:BB:CC:00:33:44"
+    hostname: printer.lan
+    allowed_ports:
+      - port: 9100
+        protocol: tcp
+    required_ports:
+      - port: 9100
+        protocol: tcp
+
+  - host: router
+    mac: "AA:BB:CC:00:55:66"
+    hostname: router.lan
+    allowed_ports:
+      - port: 53
+        protocol: udp
+      - port: 22
+        protocol: tcp
+    required_ports:
+      - port: 53
+        protocol: udp
+      - port: 22
+        protocol: tcp
+
+# Guest/unmanaged devices with randomized MACs are intentionally NOT listed here.
+# A scanned host that can't be matched to a rule above is flagged NEW_HOST (known
+# MAC, no rule) or UNVERIFIED_IDENTITY (randomized/unknown MAC) - never silently
+# allowed, and never a false "new device" alert for devices you don't manage.

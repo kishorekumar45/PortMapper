@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX - 192.168.1.0/24" start="1755423600" version="7.94" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
+<host starttime="1755423600" endtime="1755423610">
+<status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.10" addrtype="ipv4"/>
+<address addr="B8:27:EB:12:34:56" addrtype="mac" vendor="Raspberry Pi Foundation"/>
+<hostnames>
+<hostname name="nas.lan" type="PTR"/>
+</hostnames>
+<ports>
+<port protocol="tcp" portid="22">
+<state state="open" reason="syn-ack" reason_ttl="64"/>
+<service name="ssh" product="OpenSSH" version="9.6" method="probed" conf="10"/>
+</port>
+<port protocol="tcp" portid="80">
+<state state="closed" reason="reset" reason_ttl="64"/>
+<service name="http" method="table" conf="3"/>
+</port>
+<port protocol="tcp" portid="8080">
+<state state="filtered" reason="no-response" reason_ttl="0"/>
+<service name="http-proxy" method="table" conf="3"/>
+</port>
+</ports>
+</host>
+<host starttime="1755423611" endtime="1755423616">
+<status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.1" addrtype="ipv4"/>
+<address addr="24:A4:3C:00:99:88" addrtype="mac" vendor="Ubiquiti Networks Inc."/>
+<hostnames>
+<hostname name="router.lan" type="PTR"/>
+</hostnames>
+<ports>
+<port protocol="udp" portid="53">
+<state state="open" reason="udp-response" reason_ttl="64"/>
+<service name="domain" product="dnsmasq" version="2.90" method="probed" conf="10"/>
+</port>
+</ports>
+</host>
+<host starttime="1755423617" endtime="1755423619">
+<status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.144" addrtype="ipv4"/>
+<address addr="02:1A:2B:3C:4D:5E" addrtype="mac" vendor=""/>
+<ports>
+<port protocol="udp" portid="5353">
+<state state="open" reason="udp-response" reason_ttl="64"/>
+<service name="mdns" method="table" conf="3"/>
+</port>
+</ports>
+</host>
+<host starttime="1755423620" endtime="1755423620">
+<status state="down" reason="no-response" reason_ttl="0"/>
+<address addr="192.168.1.200" addrtype="ipv4"/>
+</host>
+<runstats>
+<finished time="1755423625" timestr="Sun Aug 17 09:00:25 2026" elapsed="25.00" summary="Nmap done at Sun Aug 17 09:00:25 2026; 4 IP addresses (3 hosts up) scanned in 25.00 seconds" exit="success"/>
+<hosts up="3" down="1" total="4"/>
+</runstats>
+</nmaprun>

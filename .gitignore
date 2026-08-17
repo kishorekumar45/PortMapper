@@ -1,0 +1,30 @@
+__pycache__/
+*.egg-info/
+*.pyc
+.venv/
+.pytest_cache/
+.coverage
+dist/
+build/
+.env
+
+# private/local policy files - never commit a real network's declared policy,
+# only the sanitized examples under tests/fixtures/
+home_policy.yaml
+my_policy.yaml
+local_policy.yaml
+
+# raw nmap scan output / captured live-network data - never commit real
+# reconnaissance dumps, only the sanitized fixtures under tests/fixtures/
+*.xml
+*.nmap
+*.gnmap
+*.log
+*.pcap
+!tests/fixtures/*.xml
+
+# AI-assistant scaffolding - kept locally for continued Claude Code use in
+# this repo, not relevant to end users of the published tool
+CLAUDE.md
+PLAN.md
+.claude/
